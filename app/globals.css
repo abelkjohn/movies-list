@@ -2,26 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+html, body {
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+  background-image: url("./images/jon-tyson-A-obUh61bKw-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 180px;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+#title {
+  margin: 0;
+  color: black;
+  text-shadow: 2px 2px white;
+}
+
+.search {
+  position: relative;
+  bottom: 35px;
+  display: flex;
+  width: 95%;
+  max-width: 700px;
+  margin: 1em auto;
+  border-radius: 10px;     
+  padding: 0.5em;
+  border: 0.5px solid grey;
+}
+
+#search * {
+  
+}
+
+
+#search input {
+  width: 75%;
+  border-radius: 10px 0px 0px 10px;
+  border-right: none;
+}
+
+#search button {
+  width: 25%;
+  border-radius: 0px 10px 10px 0px; 
+  background-color: white;
+  
+}
+
+#nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+#item-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.poster {
+  width: 120px;
+}
+
+.title-rating, .info, .flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movie-results {
+  width: 80%;
+  max-width: 550px;
+  margin: 220px auto 0px auto;
+  font-size: 14px;
+}
+
+.watchlist {
+ margin-top : 50px 
+}
+
+.movie-desc * *{
+  margin: 0.2em;
+}
+.movie-desc {
+  padding: 1em;
+}
+
+.inline-block * {
+  display: inline-block;
+}
+.align {
+  text-align: center;
+}
+
+.plus {
+  background-image: url('./images/plus.png') 
 }
