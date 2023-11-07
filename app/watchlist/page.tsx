@@ -7,8 +7,9 @@ console.log(star.src)
 
 export default function Watchlist(){
 const [ list, setList ] = React.useState('')
+
 React.useEffect(function(){
-    setList(localStorage.getItem('movies') ? localStorage.getItem('movies').split(' ').slice(0, list.length - 1) : "")
+    setList(localStorage.getItem('movies').split(' ').slice(0, list.length - 1))
 
 }, [ ])
 
