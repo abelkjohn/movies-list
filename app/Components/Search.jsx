@@ -7,7 +7,6 @@ import Link from "next/link";
 export default function Search(){
     const [ query, setQuery ] = React.useState('')
     const [ results, setResults ] = React.useState('')
-    const [ render, setRender ] = React.useState('')
 
     React.useEffect(function(){
     const movieList = document.getElementById('movie-results')
@@ -56,7 +55,7 @@ export default function Search(){
 
     function temp(e){
         if (e.target.id == 'add'){
-            if (localStorage.getItem("movies") == ["", ""]){
+            if (localStorage.getItem("movies") !== ["", ""]){
             localStorage.removeItem('movies')
             console.log(localStorage.getItem("movies"))
 
