@@ -7,14 +7,18 @@ console.log(star.src)
 
 export default function Watchlist(){
 const [ list, setList ] = React.useState('')
+const [ movieList, setMovieList ] = React.useState('')
+
+
 React.useEffect(function(){
     let movies = localStorage.getItem('movies')
     movies = movies.split(' ').slice(0, list.length - 1)
     setList( movies )
+    setMovieList(document.getElementById('movie-results'))
+
     console.log(list)
 }, [ ])
 
-const movieList = document.getElementById('movie-results')
 
 const card = (data) => `
                 <div id='item-card'>
