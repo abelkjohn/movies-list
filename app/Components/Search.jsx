@@ -55,7 +55,7 @@ export default function Search(){
 
     function temp(e){
         if (e.target.id == 'add'){
-            if (localStorage.getItem("movies") !== ["", ""]){
+            if (localStorage.getItem("movies")[0] == ''){
             localStorage.removeItem('movies')
             console.log(localStorage.getItem("movies"))
 
